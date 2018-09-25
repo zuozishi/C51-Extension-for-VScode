@@ -4,9 +4,17 @@ The C51 Program Compile
 
 ## How to use
 
+0. Before you start, Setting the C51 bin dir.
+ ![Setting](https://raw.githubusercontent.com/Zuozishi/C51-Extension-for-VScode/master/image/4.jpg)
+
 1. Create a .c file and wite your program.
+ ![Create and write a .c file](https://raw.githubusercontent.com/Zuozishi/C51-Extension-for-VScode/master/image/1.jpg)
+
 2. Click the right mouse button then click "Build C51".
+ ![Build C51](https://raw.githubusercontent.com/Zuozishi/C51-Extension-for-VScode/master/image/2.jpg)
+
 3. If your program no error, the hex file will created in the current dir.
+![Complete!!!](https://raw.githubusercontent.com/Zuozishi/C51-Extension-for-VScode/master/image/4.jpg)
 
 ## Extension Settings
 
