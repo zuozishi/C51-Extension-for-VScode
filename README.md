@@ -28,6 +28,10 @@ None
 
 ### 0.0.2
 
+Update README.md file (Add block "How to use?").
+
+### 0.0.2
+
 Add "Build C51" context menu for .c file.
 Add "Only output hex file" Setting.
 

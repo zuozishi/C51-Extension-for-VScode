@@ -2,7 +2,7 @@
     "name": "c51",
     "displayName": "C51",
     "description": "C51",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "Zuozishi",
     "engines": {
         "vscode": "^1.27.0"
