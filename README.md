@@ -14,7 +14,7 @@ The C51 Program Compile
  ![Build C51](https://raw.githubusercontent.com/Zuozishi/C51-Extension-for-VScode/master/image/2.jpg)
 
 3. If your program no error, the hex file will created in the current dir.
-![Complete!!!](https://raw.githubusercontent.com/Zuozishi/C51-Extension-for-VScode/master/image/4.jpg)
+![Complete!!!](https://raw.githubusercontent.com/Zuozishi/C51-Extension-for-VScode/master/image/3.jpg)
 
 ## Extension Settings
 
