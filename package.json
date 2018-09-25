@@ -1,0 +1,64 @@
+{
+    "name": "c51",
+    "displayName": "C51",
+    "description": "C51",
+    "version": "0.0.2",
+    "publisher": "Zuozishi",
+    "engines": {
+        "vscode": "^1.27.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.buildC51"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "extension.buildC51",
+                    "when": "resourceExtname == .c",
+                    "group": "C51"
+                }
+            ]
+        },
+        "commands": [
+            {
+                "command": "extension.buildC51",
+                "title": "Build C51"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "C51 configuration",
+            "properties": {
+                "C51.binDir": {
+                    "type": "string",
+                    "default": "C:\\Program Files (x86)\\Keil C51\\C51\\BIN",
+                    "description": "The C51 Bin Directory"
+                },
+                "C51.OnlyOutputHexFile":{
+                    "type":"boolean",
+                    "default":true,
+                    "description":"Only Output Hex File without OBJ and LST file."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "eslint": "^4.11.0",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "vsce": "^1.49.2"
+    }
+}
