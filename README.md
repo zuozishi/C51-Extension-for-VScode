@@ -26,7 +26,11 @@ This extension contributes the following settings:
 
 None
 
-### 0.0.2
+### 0.0.4
+
+Add github link.
+
+### 0.0.3
 
 Update README.md file (Add block "How to use?").
 

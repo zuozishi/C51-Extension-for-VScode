@@ -2,7 +2,7 @@
     "name": "c51",
     "displayName": "C51",
     "description": "C51",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "Zuozishi",
     "engines": {
         "vscode": "^1.27.0"
@@ -13,6 +13,10 @@
     "activationEvents": [
         "onCommand:extension.buildC51"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zuozishi/C51-Extension-for-VScode"
+    },
     "main": "./extension",
     "contributes": {
         "menus": {
