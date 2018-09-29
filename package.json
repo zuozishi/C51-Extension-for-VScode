@@ -2,7 +2,7 @@
     "name": "c51",
     "displayName": "C51",
     "description": "C51",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publisher": "Zuozishi",
     "engines": {
         "vscode": "^1.27.0"
@@ -23,7 +23,7 @@
             "editor/context": [
                 {
                     "command": "extension.buildC51",
-                    "when": "resourceExtname == .c",
+                    "when": "resourceLangId == c",
                     "group": "C51"
                 }
             ]

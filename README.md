@@ -24,7 +24,16 @@ This extension contributes the following settings:
 
 ## Known Issues
 
-None
+If some error on installing, please update vscode.
+
+Program file name must have once '.c'. 
+
+E.x : File name not support 'test.c.c'.
+
+### 0.0.5
+
+Fix .C file not support error.
+(Thanks @wangnengquan's issue on github)
 
 ### 0.0.4
 
