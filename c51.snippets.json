@@ -1,0 +1,21 @@
+{
+	"uchar": {
+		"prefix": "#uchar",
+		"body": [
+			"typedef unsigned char uchar;"
+		],
+		"description": "Insert uchar (unsigned char) define."
+	},"uint": {
+		"prefix": "#uint",
+		"body": [
+			"typedef unsigned int uint;"
+		],
+		"description": "Insert uchar (unsigned int) define."
+	},"include": {
+		"prefix": "#include",
+		"body": [
+			"#include <reg52.h>"
+		],
+		"description": "Insert reg52.h inc file define."
+	}
+}
