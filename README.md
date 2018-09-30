@@ -31,11 +31,20 @@ This extension contributes the following settings:
 
 ## Known Issues
 
+### EN:
 If some error on installing, please update vscode.
 
 Program file name must have once '.c'. 
 
 E.x : File name not support 'test.c.c'.
+### CH:
+如果拓展安装失败请确保VScode为最新版。
+
+源码文件的文件名必须有一个“.c”。
+
+例如：文件名不支持“test.c.c”，应为“test.c”。
+
+## 更新日志
 
 ### 0.0.8
 
