@@ -37,7 +37,7 @@ function activate(context) {
             vscode.window.showErrorMessage("Please open a c file.");
             return;
         }
-        var filePath=vscode.workspace.textDocuments[0].fileName;
+        var filePath=vscode.window.activeTextEditor.document.fileName;
         filePath=filePath.replace(".c","").replace(".C","");
         cmd.sendText("@echo off");
         cmd.sendText("\""+binDir+"\\C51.exe"+"\" "+"\""+filePath+".c\"",true);
