@@ -4,6 +4,7 @@
     "description": "C51",
     "version": "0.0.8",
     "publisher": "Zuozishi",
+    "icon": "CPU.png",
     "engines": {
         "vscode": "^1.27.0"
     },
