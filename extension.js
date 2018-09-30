@@ -1,4 +1,5 @@
 const vscode = require('vscode');
+
 /*
 const C51 = [
     { scheme: 'file', language: 'c' },
@@ -13,9 +14,7 @@ export class C51HoverProvider {
     }
 }
 */
-
 function activate(context) {
-
     console.log('Congratulations, extension "c51" is now active!');
     //let hover = vscode.languages.registerHoverProvider(C51, new C51HoverProvider.C51HoverProvider());
     //context.subscriptions.push(hover);
@@ -39,7 +38,7 @@ function activate(context) {
             return;
         }
         var filePath=vscode.workspace.textDocuments[0].fileName;
-        filePath=filePath.replace(".c","");
+        filePath=filePath.replace(".c","").replace(".C","");
         cmd.sendText("@echo off");
         cmd.sendText("\""+binDir+"\\C51.exe"+"\" "+"\""+filePath+".c\"",true);
         cmd.sendText("\""+binDir+"\\BL51.exe"+"\" "+"\""+filePath+".OBJ\"",true);

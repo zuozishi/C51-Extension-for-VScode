@@ -2,7 +2,7 @@
     "name": "c51",
     "displayName": "C51",
     "description": "C51",
-    "version": "0.0.8",
+    "version": "0.1.1",
     "publisher": "Zuozishi",
     "icon": "CPU.png",
     "engines": {
@@ -20,16 +20,20 @@
     },
     "main": "./extension",
     "contributes": {
-        "hoverProvider":"true",
-        "grammars": [{
-			"language": "c",
-			"scopeName": "source.c",
-			"path": "c51.tmLanguage.json"
-		}],
-        "snippets": [{
-			"language": "c",
-			"path": "c51.snippets.json"
-		}],
+        "hoverProvider": "true",
+        "grammars": [
+            {
+                "language": "c",
+                "scopeName": "source.c",
+                "path": "c51.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "c",
+                "path": "c51.snippets.json"
+            }
+        ],
         "menus": {
             "editor/context": [
                 {
@@ -54,10 +58,10 @@
                     "default": "C:\\Program Files (x86)\\Keil C51\\C51\\BIN",
                     "description": "The C51 Bin Directory"
                 },
-                "C51.OnlyOutputHexFile":{
-                    "type":"boolean",
-                    "default":true,
-                    "description":"Only Output Hex File without OBJ and LST file."
+                "C51.OnlyOutputHexFile": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Only Output Hex File without OBJ and LST file."
                 }
             }
         }
