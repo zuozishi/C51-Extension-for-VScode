@@ -79,5 +79,21 @@
     },
     "dependencies": {
         "vsce": "^1.49.2"
-    }
+    },"badges": [
+		{
+			"url": "https://vsmarketplacebadge.apphb.com/version/Zuozishi.c51.svg",
+			"href": "https://marketplace.visualstudio.com/items/Zuozishi.c51",
+			"description": "Extension version"
+		},
+		{
+			"url": "https://vsmarketplacebadge.apphb.com/installs/Zuozishi.c51.svg",
+			"href": "https://marketplace.visualstudio.com/items/Zuozishi.c51",
+			"description": "Extension installs"
+		},
+		{
+			"url": "https://vsmarketplacebadge.apphb.com/rating/Zuozishi.c51.svg",
+			"href": "https://marketplace.visualstudio.com/items/Zuozishi.c51",
+			"description": "Extension Rating"
+		}
+	]
 }
