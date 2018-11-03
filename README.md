@@ -1,5 +1,9 @@
 # C51 Extension
 
+[![](https://vsmarketplacebadge.apphb.com/version/Zuozishi.c51.svg)](https://marketplace.visualstudio.com/items?itemName=Zuozishi.c51)
+[![](https://vsmarketplacebadge.apphb.com/installs/Zuozishi.c51.svg)](https://marketplace.visualstudio.com/items?itemName=Zuozishi.c51)
+[![](https://vsmarketplacebadge.apphb.com/rating/Zuozishi.c51.svg)](https://marketplace.visualstudio.com/items?itemName=Zuozishi.c51)
+
 The C51 Program Compile 
 
 ## Language snippets
@@ -17,7 +21,7 @@ This extension contributes the following settings:
 
 ## How to use
 
-0. Before you start, Setting the C51 bin dir.
+1. Before you start, Setting the C51 bin dir.
  ![Setting](https://raw.githubusercontent.com/Zuozishi/C51-Extension-for-VScode/master/image/4.jpg)
 
 1. Create a .c file and wite your program.
