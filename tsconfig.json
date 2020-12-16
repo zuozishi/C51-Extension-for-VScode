@@ -2,12 +2,15 @@
     "compilerOptions": {
         "module": "commonjs",
         "target": "es6",
-        "checkJs": true,  /* Typecheck .js files. */
+        "outDir": ".",
         "lib": [
             "es6"
-        ]
+        ],
+        "sourceMap": true,
+        "rootDir": "."
     },
     "exclude": [
-        "node_modules"
+        "node_modules",
+        ".vscode-test"
     ]
 }

@@ -1,28 +1,32 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const vscode = require("vscode");
-const fs = require("fs");
-const path = require("path");
+import * as vscode from 'vscode';
+import * as fs from 'fs';
+import * as path from 'path';
+
 var MsgText = null;
-exports.C51 = [
+
+export const C51 = [
     { scheme: 'file', language: 'c' },
     { scheme: 'untitled', language: 'c' }
 ];
-class GoDefinitionProvider {
-    provideDefinition(document, position, token) {
+
+class GoDefinitionProvider implements vscode.DefinitionProvider {
+    public provideDefinition(
+        document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken) {
         let range = document.getWordRangeAtPosition(position);
         let text = document.getText(range);
         let lineText = document.lineAt(range.start.line).text;
         var c51Dir = vscode.workspace.getConfiguration("C51").get("binDir").toString();
         c51Dir = c51Dir.replace('\BIN', '');
         if (lineText.indexOf("#include") == 0) {
-            var fileName = lineText.replace(" ", "").replace("#include<", "").replace(">", "");
-            return new vscode.Location(vscode.Uri.parse("file:///" + path.join(c51Dir, 'INC', fileName)), new vscode.Position(0, 0));
+            var fileName = lineText.replace(" ","").replace("#include<", "").replace(">", "");
+            return new vscode.Location(
+                vscode.Uri.parse("file:///"+path.join(c51Dir, 'INC', fileName)), new vscode.Position(0, 0));
         }
         return null;
     }
 }
-class C51HoverProvider {
+
+export class C51HoverProvider implements vscode.HoverProvider {
     provideHover(document, position, token) {
         let range = document.getWordRangeAtPosition(position);
         let text = document.getText(range);
@@ -32,8 +36,7 @@ class C51HoverProvider {
                 MsgText.Hover[text].forEach(element => {
                     resText += element + "\n\r";
                 });
-            }
-            else {
+            } else {
                 resText = MsgText.Hover[text];
             }
             return new vscode.Hover(resText);
@@ -41,19 +44,22 @@ class C51HoverProvider {
         return new vscode.Hover(null);
     }
 }
-exports.C51HoverProvider = C51HoverProvider;
+
 function init(context) {
     fs.readFile(path.join(__dirname, 'text_zh.json'), 'utf-8', function (err, data) {
         MsgText = JSON.parse(data);
         activate(context);
     });
 }
+
 function activate(context) {
     console.log(MsgText.InitMsg);
-    let hover = vscode.languages.registerHoverProvider(exports.C51, new C51HoverProvider());
-    let goDefinition = vscode.languages.registerDefinitionProvider(exports.C51, new GoDefinitionProvider());
+
+    let hover = vscode.languages.registerHoverProvider(C51, new C51HoverProvider());
+    let goDefinition = vscode.languages.registerDefinitionProvider(C51, new GoDefinitionProvider());
     context.subscriptions.push(hover);
     context.subscriptions.push(goDefinition);
+
     let disposable = vscode.commands.registerCommand('extension.buildC51', function () {
         var cmd = null;
         var binDir = vscode.workspace.getConfiguration("C51").get("binDir");
@@ -84,10 +90,11 @@ function activate(context) {
             cmd.sendText("del " + filePath);
         }
     });
+
     context.subscriptions.push(disposable);
 }
 exports.activate = init;
+
 function deactivate() {
 }
 exports.deactivate = deactivate;
-//# sourceMappingURL=extension.js.map
